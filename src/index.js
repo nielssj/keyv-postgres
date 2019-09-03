@@ -1,7 +1,7 @@
 'use strict';
 
 const KeyvSql = require('@keyv/sql');
-const Pool = require('pg').Pool;
+const { Pool } = require('pg');
 
 class KeyvPostgres extends KeyvSql {
 	constructor(opts) {
