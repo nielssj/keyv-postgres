@@ -1,0 +1,11 @@
+# Docker compose configuration that allows integration tests to be run
+postgres:
+  image: postgres:9.5
+  ports:
+   - 5432:5432
+  environment:
+   - POSTGRES_USER=postgres
+   - POSTGRES_DB=keyv_test
+  # Increased max_connections and shared_buffer counts
+  command:
+    postgres -N 150 -B 300

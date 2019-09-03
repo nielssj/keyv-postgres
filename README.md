@@ -33,6 +33,12 @@ e.g:
 const keyv = new Keyv('postgresql://user:pass@localhost:5432/dbname', { table: 'cache' });
 ```
 
+## Test prerequisites
+Local Postgres instance using included docker-compose configuration:
+```
+docker-compose up
+```
+
 ## License
 
 MIT © Luke Childs
