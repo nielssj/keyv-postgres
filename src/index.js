@@ -13,7 +13,7 @@ class KeyvPostgres extends KeyvSql {
 		// Add custom SSL configuration, if "sslmode" present in connectionString (Work around issue with self-signed certs: https://github.com/brianc/node-postgres/issues/2009)
 		let ssl
 		let connectionString = opts.uri
-		const sslIndex = inputString.indexOf("sslmode")
+		const sslIndex = opts.uri.indexOf("sslmode")
 		if (sslIndex > 0) {
 			connectionString = connectionString.substring(0, sslIndex - 1)
 			ssl = { rejectUnauthorized: false }
